@@ -467,9 +467,9 @@ footer {
     right:40px;
     display:none;
 
-    // @include md {
-    //   top: 981px;
-    // }
+    @include md {
+      top: 981px;
+    }
 
     &:hover {
       text-decoration: none;

@@ -594,11 +594,6 @@ footer .scrollToTop {
     top: 981px;
   }
 }
-@media (min-width: 1024px) and (max-width: 1366px) {
-  footer .scrollToTop {
-    top: 1327px;
-  }
-}
 footer .scrollToTop:hover {
   text-decoration: none;
   background-color: #c10202;
