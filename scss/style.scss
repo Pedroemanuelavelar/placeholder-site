@@ -471,10 +471,6 @@ footer {
       top: 981px;
     }
 
-    @include ipadPro {
-      top: 1327px;
-    }
-
     &:hover {
       text-decoration: none;
       background-color: $color-dark-red;
