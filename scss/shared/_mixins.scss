@@ -1,0 +1,18 @@
+/// Mobile
+@mixin sm {
+  @media (max-width: 767.98px) { @content; }
+}
+
+// Tablet
+@mixin md {
+  @media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+}
+
+@mixin ipadPro {
+  @media (min-width: 1024px) and (max-width: 1366px) { @content; }
+}
+
+// Desktop
+@mixin lg-xl {
+  @media (min-width: 1200px) { @content; }
+}

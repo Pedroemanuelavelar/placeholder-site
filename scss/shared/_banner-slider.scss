@@ -1,0 +1,83 @@
+@import 'color';
+@import 'fonts';
+@import './mixins';
+
+
+.header__slider-background {
+  background-image: url(../../assets/images/banner-topo.jpg);
+  background-repeat: no-repeat;
+  background-position: initial;
+  background-size: cover;
+
+  .wrap {
+    padding: 40px 150px 80px 0px;
+
+    @include sm {
+      padding-bottom: 120px;
+    }
+
+    @include md {
+      padding-right: 107px;
+    }
+
+    .header__slider-title {
+      color: $color-0;
+      font-size: 35px;
+      font-weight: 900;
+      font-family: $roboto-thin;
+      margin-bottom: 10px;
+
+      @include sm {
+        text-align: center!important;
+        width: 368px;
+        padding-top: 20px;
+      }
+    }
+  
+    .header__slider-p {
+      font-family: $roboto-thin;
+      margin-left: 66%;
+      font-size: 18px;
+
+      @include sm {
+        transform: translateX(65px)!important;
+        margin-top: 37px;
+        margin-left: 0px;
+        text-align: center!important;
+      }
+    }
+  
+    .header__slider-cta {
+      font-family: $roboto-thin;
+      margin-left: 65%;
+      font-weight: 600;
+      font-size: 18px;
+
+      @include sm {
+        margin-left: 0px;
+        text-align: center!important;
+        transform: translateX(21px);
+        width: 316px;
+        margin-top: 26px;
+      }
+    }
+  
+    .header__slider-button {
+      background-color: $color-tel;
+      font-size: 16px;
+      font-family: 'PT Sans Narrow', sans-serif;
+      padding: 8px 52px 8px 52px;
+      transition: all .4s ease-in-out;
+      transform: translateX(14px);
+      &:hover {
+        background-color: $color-tel-hover;
+      }
+
+      @include sm {
+        transform: translateX(80px);
+        margin-top: 20px;
+        padding: 10px;
+      }
+    }
+  }
+}

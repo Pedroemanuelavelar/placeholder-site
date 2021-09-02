@@ -1,0 +1,545 @@
+@import './shared/color';
+@import './shared/fonts';
+@import './shared/navbar';
+@import './shared/banner-slider';
+@import './shared/mixins';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include md {
+    overflow-x: hidden;
+  }
+}
+
+.contact__top {
+  background-color: $color-dark-red;
+  font-family: $roboto-thin;
+  font-weight: 900;
+  font-size: 11.5px;
+  display: flex;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  gap: 15px;
+  vertical-align: middle;
+
+  @include sm {
+    display: none;
+  }
+
+  p {
+    margin-bottom: 0;
+    &.contact__top-cta {
+      color: $color-0;
+      text-transform: uppercase;
+    }
+
+    &.contact__top-infos {
+      color: $color-tel;
+    }
+
+    &.fix-tel, &.tel {
+      &::after {
+        content: '•';
+        color: $color-0;
+        margin-left: 16px;
+        font-weight: 900;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.cta {
+  .cta__colaborador {
+    background-color: $color-1;
+    .cta-title {
+      font-size: 18px;
+      font-family: $roboto-thin;
+      font-weight: 900;
+      color: $color-tel;
+      padding-top: 32px;
+      padding-bottom: 22px;
+      margin-bottom: 0px;
+
+      @include sm {
+        width: 353px;
+      }
+    }
+
+    .cta-link {
+      text-decoration: none;
+      .cta-btn {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        margin-bottom: 34px;
+        border-radius: 10px;
+        padding: 10px 18px 10px 18px;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .cta__wpp {
+    background-color: $color-5;
+    .cta-title {
+      font-size: 18px;
+      font-family: $roboto-thin;
+      font-weight: 900;
+      color: $color-tel;
+      padding-top: 32px;
+      padding-bottom: 22px;
+      margin-bottom: 0px;
+    }
+
+    .cta-link {
+      text-decoration: none;
+      .cta-btn {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        margin-bottom: 34px;
+        border-radius: 10px;
+        padding: 10px 18px 10px 18px;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .cta-orcamento {
+    background-color: $color-6;
+    .cta-title {
+      font-size: 18px;
+      font-family: $roboto-thin;
+      font-weight: 900;
+      color: $color-tel;
+      padding-top: 32px;
+      padding-bottom: 22px;
+      margin-bottom: 0px;
+      width: 70%;
+    }
+
+    .cta-link {
+      text-decoration: none;
+      .cta-btn {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        margin-bottom: 34px;
+        border-radius: 10px;
+        padding: 10px 18px 10px 18px;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .cta-revendedor {
+    background-color: $color-7;
+
+    @include md {
+      padding-top: 20px!important;
+      padding-bottom: 20px!important;
+    }
+
+    .cta-title {
+      font-size: 18px;
+      font-family: $roboto-thin;
+      font-weight: 900;
+      color: $color-tel;
+      padding-top: 32px;
+      padding-bottom: 22px;
+      margin-bottom: 0px;
+      width: 70%;
+    }
+
+    .cta-link {
+      text-decoration: none;
+      .cta-btn {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        margin-bottom: 34px;
+        border-radius: 10px;
+        padding: 10px 18px 10px 18px;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.products {
+  background-color: $color-bg;
+  padding-left:40px;
+  padding-top: 50px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: hidden;
+
+  .products__title {
+    font-family: $roboto-thin;
+    margin-bottom: 70px;
+    font-size: 30px;
+    font-weight: 900;
+    color: $color-1;
+
+    @include sm {
+      margin-bottom: 33px;
+    }
+  }
+
+  .product__title {
+    font-family: $roboto-thin;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-3;
+  }
+
+  .product__price {
+    font-family: $open-sans;
+    font-size: 18px;
+    color: $color-2;
+    font-weight: 800;
+
+    .product__old-price {
+      font-size: 17.5px;
+      color: $color-8;
+      font-family: $roboto-thin;
+      font-weight: 400;
+      text-decoration: line-through;
+      margin-right: 20px;
+    }
+  }
+
+  .product__option {
+    color: $color-4;
+    font-size: 14px;
+    font-family: $roboto-thin;
+    font-weight: 500;
+  }
+
+  .product__img {
+    width: 100%;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+}
+
+.wpp__orcamento {
+  padding: 40px 0px 40px 0px;
+  height: auto;
+  /* margin-right: 20px; */
+
+  @include sm {
+    padding: 40px 10px 40px 10px;
+  }
+
+  .wpp__img {
+    width: 100%;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .wpp__title {
+    width: 80%;
+    font-weight: bold;
+    font-family: $roboto-thin;
+    color: $color-1;
+    font-size: 38px;
+
+    @include sm {
+      width: 98%!important;
+      font-size: 24px;
+    }
+  }
+
+  .wpp__description {
+    font-size: 25px;
+    font-family: $roboto-thin;
+    color: $color-1;
+
+    @include sm {
+      font-size: 1.3em;
+    }
+  }
+
+  .wpp__btn {
+    border-radius: 10px;
+    background-color: $color-btn-wpp;
+    height: 45px;
+    font-size: 16px;
+    color: $color-0;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: $color-btn-wpp-hover;
+      color: $color-0-hover;
+    }
+
+    @include sm {
+      margin-top: 40px;
+    }
+  }
+
+}
+
+.cta_revendedor {
+  background-image: url(../assets/images/seja-um-revendedor.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 89px;
+  background-size: cover;
+
+  @include sm {
+    padding-top: 43px;
+    padding-left: 43px;
+    padding-right: 43px;
+    padding-bottom: 60px;
+  }
+
+  .cta__revendedor-title {
+    color: $color-0;
+    font-family: $roboto-thin;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: normal;
+    margin-bottom: 34px;
+    padding-top: 20px;
+
+    @include sm {
+      font-size: 24px;
+      margin-left: -13px;
+    }
+
+    .cta__revendedor-span {
+      color: $color-span-red;
+    }
+  }
+
+  .cta__revendedor-info {
+    color: $color-0;
+    font-family: $roboto-thin;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: normal;
+
+    @include sm {
+      margin-left: -13px;
+    }
+  }
+
+  .cta__revendedor-btn {
+    font-family: $roboto-thin;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 10px;
+
+    @include sm {
+      margin-top: 10px;
+    }
+  }
+}
+
+footer {
+  .wpp-btn-fix {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:93%;
+    background-color: $color-wpp-fix-btn;
+    color:$color-0;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 1px 1px 2px $color-wpp-fix-btn-shaddown;
+    z-index:1000;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  padding-top: 0px;
+  &.bg__footer-dark {
+    background-color: $color-1!important;
+  }
+
+  .menu__footer {
+    a {
+      text-decoration: none;
+      color: $color-footer-menu;
+      transition: all .3s ease-in-out;
+      line-height: 1.9;
+
+      &:hover {
+        color: $color-red-primary;
+      }
+    }
+  }
+
+  .footer__social-title {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: $roboto-thin;
+    margin-top: 2rem;
+    margin-bottom: 0px;
+  }
+
+  .footer__social-icons {
+    color: $color-span-red;
+    font-size: 30px;
+    margin-top: 0px;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: $color-red-primary;
+    }
+  }
+
+  .footer__contact-local {
+    font-size: 14px;
+    font-family: $roboto-thin;
+    font-weight: 600;
+    margin-bottom: 0px;
+
+    .separator {
+      &::after {
+        content: '•';
+        color: $color-0;
+        margin-left: 5px;
+        font-weight: 900;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .footer__contact-description {
+    margin-bottom: 0px;
+  }
+
+  .footer__contact-infos {
+    color: $color-tel;
+    font-family: $roboto-thin;
+    font-size: 14px;
+    font-weight: 500;
+
+    .footer__contact-phone {
+      margin-bottom: 0px;
+    }
+  }
+
+  .scrollToTop {
+    position:fixed;
+    top:624px; 
+    right:40px;
+    display:none;
+
+    @include md {
+      top: 981px;
+    }
+
+    @include ipadPro {
+      top: 1327px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: $color-dark-red;
+      color: $color-0-hover;
+    }
+    
+
+    .arrow-up {
+      &::before {
+        content: '^';
+        font-family: $roboto-thin;
+        font-size: 28px;
+        font-weight: bold;
+        color: $color-0;
+        background-color: $color-red-primary;
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        text-align: center;
+        transition: all .3s ease-in-out;
+      }
+    }
+    
+  }
+}
+
+.slick-prev, .slick-next {
+    top: 33%!important;
+    &::before {
+      color: $color-7!important;
+      font-size: 29px!important;
+    }
+
+    @include sm {
+      display: none!important;
+    }
+
+    @include md {
+      display: none!important;
+    }
+}
+
+.slick-dots {
+  @include sm {
+    bottom: -45px!important;
+  }
+
+  @include md {
+    bottom: -45px!important;
+  }
+
+  li {
+    &.slick-active {
+      button {
+        &::before {
+          color: $color-red-primary!important;
+          opacity: 1;
+        }
+      }
+    }
+
+    button {
+      &::before {
+        font-size: 13px!important;
+      }
+    }
+  }
+}
